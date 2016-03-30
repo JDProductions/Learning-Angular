@@ -1,6 +1,6 @@
 var myApp = angular.module('myApp', []);
 
-myApp.controller('mainController', ['$scope', '$filter', '$log', function($scope, $filter, $log) {
+myApp.controller('mainController', ['$scope', '$filter', '$log', '$timeout', function($scope, $filter, $log, $timeout) {
     
     $scope.handle = '';
     $scope.lowercasehandle = function() {                               
@@ -21,6 +21,10 @@ myApp.controller('mainController', ['$scope', '$filter', '$log', function($scope
         $scope.handle = 'newtwitterhandle';
         console.log('Scope changed!');
             }); // end digest cycle
+    } ,3000);
+    
+    $timeout(function(){
+        
     } ,3000);
 
 }]);
